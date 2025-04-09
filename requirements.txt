@@ -1,0 +1,6 @@
+pydantic-ai==0.0.42
+python-dotenv==1.0.0
+logfire==3.1.1
+pydantic-ai[logfire]==0.0.42
+logfire[asyncpg]==3.1.1
+requests>=2.32.3
