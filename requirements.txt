@@ -4,3 +4,12 @@ logfire==3.1.1
 pydantic-ai[logfire]==0.0.42
 logfire[asyncpg]==3.1.1
 requests>=2.32.3
+
+# Fijados a mano: el requirements.txt original no limita la version de
+# opentelemetry, y pip instala la mas nueva por defecto (1.44.x), que ya
+# no es compatible con pydantic-ai 0.0.42 (falla con
+# "ModuleNotFoundError: No module named 'opentelemetry._events'").
+# Probado y funcionando con estas versiones:
+opentelemetry-api==1.29.0
+opentelemetry-sdk==1.29.0
+opentelemetry-semantic-conventions==0.50b0
